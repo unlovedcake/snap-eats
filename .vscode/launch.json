@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "Flutter",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "toolArgs": [
+        "--dart-define",
+        "APP_CHECK_TOKEN=818758d3-b20c-4fa6-b2ba-4f017acf75ea",
+        "--dart-define",
+        "MY_OTHER_VAR=818758d3-b20c-4fa6-b2ba-4f017acf75ea"
+      ]
+    }
+  ]
+}
