@@ -22,7 +22,6 @@ Future<void> main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   await FirebaseAppCheck.instance.activate(
-
     // Set androidProvider to `AndroidProvider.debug`
     androidProvider: AndroidProvider.debug,
   );
@@ -46,7 +45,7 @@ Future<void> main() async {
     return true;
   };
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context) => GetMaterialApp(
       title: "Application",
       initialRoute: AppPages.DASHBOARD,
@@ -66,7 +65,6 @@ Future<void> _connectToFirebaseEmulator({
 
   // You can get these port numbers from firebase.json
 
-
   if (isLocalCloudFunction) {
     FirebaseFunctions.instanceFor(region: 'asia-southeast2')
         .useFunctionsEmulator(localHost, 5001);
@@ -85,6 +83,4 @@ Future<void> _connectToFirebaseEmulator({
   if (isLocalFirebaseStorage) {
     await FirebaseStorage.instance.useStorageEmulator(localHost, 9199);
   }
-
-
 }

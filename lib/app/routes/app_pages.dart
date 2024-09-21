@@ -8,6 +8,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
+import '../modules/webview/bindings/webview_binding.dart';
+import '../modules/webview/views/webview_view.dart';
 
 part 'app_routes.dart';
 
@@ -18,8 +20,7 @@ class AppPages {
   static const INITIAL = Routes.HOME;
   static const CARL = Routes.CART;
   static const PROFILE = Routes.PROFILE;
-
-
+  static const WEBVIEW = Routes.WEBVIEW;
 
   static final routes = [
     GetPage(
@@ -41,6 +42,11 @@ class AppPages {
       name: _Paths.CART,
       page: () => const CartView(),
       binding: CartBinding(),
+    ),
+    GetPage(
+      name: _Paths.WEBVIEW,
+      page: () => const WebviewView(),
+      binding: WebviewBinding(),
     ),
   ];
 }

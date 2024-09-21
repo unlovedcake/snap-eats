@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:snap_eats/app/helper/my_logger.dart';
+import 'package:snap_eats/app/routes/app_pages.dart';
 
 import '../../../helper/size_config.dart';
 import '../controllers/home_controller.dart';
@@ -48,6 +49,11 @@ class HomeView extends GetView<HomeController> {
                 controller.createTodo();
               },
               child: Text("Crate Todo")),
+          ElevatedButton(
+              onPressed: () {
+                Get.toNamed(AppPages.WEBVIEW);
+              },
+              child: Text("WebView")),
         ],
       ),
     );
